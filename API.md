@@ -32,7 +32,7 @@ Basic API to retrieve foodtruck data.
         "applicant": "Bombay Blvd.",
         "facilitytype": "Truck",
         "address": "561 MISSION ST",
-        "fooditems": null,
+        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads & Appetizer Varieties.",
         "latitude": "0.000000000000",
         "longitude": "0.000000000000"
     },
@@ -41,7 +41,7 @@ Basic API to retrieve foodtruck data.
         "applicant": "Bombay Blvd.",
         "facilitytype": "Truck",
         "address": "86 03RD ST",
-        "fooditems": null,
+        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads & Appetizer Varieties.",
         "latitude": "37.786206082104",
         "longitude": "-122.402532491346"
     },
@@ -50,9 +50,18 @@ Basic API to retrieve foodtruck data.
         "applicant": "Sausage Slinger",
         "facilitytype": "Push Cart",
         "address": "100 NEW MONTGOMERY ST",
-        "fooditems": null,
+        "fooditems": "Hot Dogs: Chips and Soda",
         "latitude": "37.787041555872",
         "longitude": "-122.400427155584"
+    },
+    {
+        "objectid": 334914,
+        "applicant": "Halal Cart",
+        "facilitytype": "Push Cart",
+        "address": "901 MARKET ST",
+        "fooditems": "Kebab: Halal Gyros: Grilled Halal Meat: Beverages",
+        "latitude": "37.783470066083",
+        "longitude": "-122.408040736138"
     },
   ... (truncated)
 ```
@@ -65,7 +74,7 @@ Basic API to retrieve foodtruck data.
     "applicant": "Halal Cart",
     "facilitytype": "Push Cart",
     "address": "901 MARKET ST",
-    "fooditems": null,
+    "fooditems": "Kebab: Halal Gyros: Grilled Halal Meat: Beverages",
     "latitude": "37.783470066083",
     "longitude": "-122.408040736138"
 }
@@ -104,7 +113,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "Bombay Blvd.",
         "facilitytype": "Truck",
         "address": "86 03RD ST",
-        "fooditems": null,
+        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads & Appetizer Varieties.",
         "latitude": "37.786206082104",
         "longitude": "-122.402532491346"
     },
@@ -114,7 +123,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "Sausage Slinger",
         "facilitytype": "Push Cart",
         "address": "100 NEW MONTGOMERY ST",
-        "fooditems": null,
+        "fooditems": "Hot Dogs: Chips and Soda",
         "latitude": "37.787041555872",
         "longitude": "-122.400427155584"
     },
@@ -124,7 +133,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "Halal Cart",
         "facilitytype": "Push Cart",
         "address": "901 MARKET ST",
-        "fooditems": null,
+        "fooditems": "Kebab: Halal Gyros: Grilled Halal Meat: Beverages",
         "latitude": "37.783470066083",
         "longitude": "-122.408040736138"
     },
@@ -134,7 +143,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "Bacon Bacon",
         "facilitytype": "Truck",
         "address": "250 CLAY ST",
-        "fooditems": null,
+        "fooditems": "Bacon burger: bacon grilled cheese: bacon sandwiches: bacon tacos: bacon fries: bacon strips: bacon caramel corn",
         "latitude": "37.795700905317",
         "longitude": "-122.398489753587"
     },
@@ -144,7 +153,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "Bacon Bacon",
         "facilitytype": "Truck",
         "address": "600 FRONT ST",
-        "fooditems": null,
+        "fooditems": "Bacon burger: bacon grilled cheese: bacon sandwiches: bacon tacos: bacon fries: bacon strips: bacon caramel corn",
         "latitude": "37.797455156782",
         "longitude": "-122.399011222821"
     },
@@ -154,7 +163,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "The Chai Cart",
         "facilitytype": "Push Cart",
         "address": "79 NEW MONTGOMERY ST",
-        "fooditems": null,
+        "fooditems": "Hot Indian Chai (Tea)",
         "latitude": "37.787889699906",
         "longitude": "-122.400535326777"
     },
@@ -164,7 +173,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "French Creme Brulee",
         "facilitytype": "Push Cart",
         "address": "720 MARKET ST",
-        "fooditems": null,
+        "fooditems": "Creme Brulee: Creme au Chocolat: Creme au Caramel:  Panna Cotta: Mini Cheesecakes: Pumpkin Cake: Salade De Fruits: Crepes with Fruit: Cold Drinks: Ice Cream: Water.",
         "latitude": "37.787598415555",
         "longitude": "-122.404090439434"
     },
@@ -174,7 +183,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "Natan's Catering",
         "facilitytype": "Truck",
         "address": "950 HARRISON ST",
-        "fooditems": null,
+        "fooditems": "Burgers: melts: hot dogs: burritos:sandwiches: fries: onion rings: drinks",
         "latitude": "37.778388615787",
         "longitude": "-122.403191783229"
     },
@@ -184,7 +193,7 @@ Retrieve list of foodtrucks within a given `radius` of center (`lat` and `lon`).
         "applicant": "Sinthya's Hot Dogs",
         "facilitytype": "Truck",
         "address": "301 06TH ST",
-        "fooditems": null,
+        "fooditems": "Hot dogs: chips: soda: corn on the cob: french fries",
         "latitude": "37.778441899211",
         "longitude": "-122.405086420952"
     },

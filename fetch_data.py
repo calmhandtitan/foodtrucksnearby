@@ -1,4 +1,6 @@
-import os; os.environ.setdefault("DJANGO_SETTINGS_MODULE", "foodtrucknearby.settings")
+import os, django; 
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "foodtrucknearby.settings")
+django.setup()
 
 import requests, json, datetime, logging, geopy
 from geopy.geocoders import GoogleV3
@@ -25,6 +27,7 @@ else:
         truck.applicant = getValue(item, 'applicant')
         truck.facilitytype = getValue(item, 'facilitytype')
         truck.address = getValue(item, 'address')
+        truck.fooditems = getValue(item, 'fooditems')
         try:
             truck.latitude = getValue(item, 'latitude')
             truck.longitude = getValue(item, 'longitude')

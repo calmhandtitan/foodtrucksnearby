@@ -22,7 +22,6 @@ SECRET_KEY = 'depcppb6+f0e-y1_&+h%sg)%)@9)pz4k*7$jt&5q@0d93lz1%y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -52,6 +51,22 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'foodtrucknearby.urls'
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 WSGI_APPLICATION = 'foodtrucknearby.wsgi.application'
 
 
@@ -68,6 +83,8 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

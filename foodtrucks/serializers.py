@@ -2,10 +2,7 @@ from rest_framework import serializers
 from .models import Foodtruck
 
 class FoodtruckSerializer(serializers.ModelSerializer):
-	distance = serializers.SerializerMethodField('get_distance')
-	
-	def get_distance(self, obj):
-		return getattr(obj, 'distance', None)
+	distance = serializers.DecimalField(max_digits=15, decimal_places=12, required=False)
 	
 	class Meta:
 		model = Foodtruck

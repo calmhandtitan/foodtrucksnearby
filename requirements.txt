@@ -1,0 +1,4 @@
+Django==1.9.8
+MySQL-python==1.2.5
+djangorestframework==3.4.0
+geopy==1.11

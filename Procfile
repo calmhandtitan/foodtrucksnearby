@@ -1,1 +1,1 @@
-web: gunicorn foodtrucksnearby.wsgi --log-file -
+web: gunicorn foodtrucknearby.wsgi --log-file -

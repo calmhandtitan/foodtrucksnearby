@@ -1,6 +1,8 @@
 # foodtrucksnearby
 A service that tells the user what types of food trucks might be found near a specific location on a map.
 
+####API documentation [`here`](API.md)
+
 To build django project locally:
 
 * `git clone` or fork

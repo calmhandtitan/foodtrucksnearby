@@ -4,3 +4,4 @@ djangorestframework==3.4.0
 geopy==1.11
 requests==2.10
 gunicorn
+dj-database-url==0.3.0

@@ -1,6 +1,7 @@
 # foodtrucksnearby
 
 [![Build Status](https://travis-ci.org/calmhandtitan/foodtrucksnearby.svg?branch=master)](https://travis-ci.org/calmhandtitan/foodtrucksnearby)
+[![Stories in Ready](https://badge.waffle.io/calmhandtitan/foodtrucksnearby.svg?label=ready&title=Ready)](http://waffle.io/calmhandtitan/foodtrucksnearby)
 
 A service that tells the user what types of food trucks might be found near a specific location on a map.
 

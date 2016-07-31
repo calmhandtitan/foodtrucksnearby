@@ -1,4 +1,7 @@
 # foodtrucksnearby
+
+[![Build Status](https://travis-ci.org/calmhandtitan/foodtrucksnearby.svg?branch=master)](https://travis-ci.org/calmhandtitan/foodtrucksnearby)
+
 A service that tells the user what types of food trucks might be found near a specific location on a map.
 
 Data pulled from [DataSF](http://www.datasf.org/): [Food Trucks](https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat)

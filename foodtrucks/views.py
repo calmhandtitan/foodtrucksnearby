@@ -49,12 +49,12 @@ def foodtruckByLocation(request, format=None):
 		Retrieve list of foodtrucks within the radius of a given location
 		Default Search Result Limit is 10
 	"""
-	if not 'latitude' in request.GET or not request.GET['latitude']:
+	if 'latitude' not in request.GET or not request.GET['latitude']:
 		return Response(status=status.HTTP_400_BAD_REQUEST)
 	else:
 		latitude = request.GET['latitude']
 
-	if not 'longitude' in request.GET or not request.GET['longitude']:
+	if 'longitude' not in request.GET or not request.GET['longitude']:
 		return Response(status=status.HTTP_400_BAD_REQUEST)
 	else:
 		longitude = request.GET['longitude']

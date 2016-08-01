@@ -11,7 +11,7 @@ from .models import Foodtruck
 from .serializers import FoodtruckSerializer
 
 
-def index(request, format=None):
+def index(request):
 	context = {}
 	if request.method == 'GET':
 		context['form'] = QueryForm()
@@ -44,7 +44,7 @@ class FoodtruckViewSet(viewsets.ModelViewSet):
 
 	
 @api_view(['GET'])
-def foodtruckByLocation(request, format=None):
+def foodtruckByLocation(request):
 	"""
 		Retrieve list of foodtrucks within the radius of a given location
 		Default Search Result Limit is 10
@@ -80,6 +80,7 @@ def findFoodTrucksbyLocation(latitude, longitude, radius, limit):
 	latitude = Decimal(latitude)
 	longitude = Decimal(longitude)
 	radius = Decimal(radius)
+	limit = int(limit)
 	
 	# calculate a bounding box using radius to retrieve trucks within approx. distance
 	lat_offset = Decimal(geopy.units.degrees(arcminutes=geopy.units.nautical(miles=float(radius))))
@@ -101,4 +102,3 @@ def findFoodTrucksbyLocation(latitude, longitude, radius, limit):
 		else:
 			truck.distance = dist
 	return foodtrucks[:limit]
-		

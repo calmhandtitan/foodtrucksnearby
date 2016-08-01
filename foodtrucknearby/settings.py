@@ -8,10 +8,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -77,22 +73,7 @@ WSGI_APPLICATION = 'foodtrucknearby.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testdb',
-        'USER': 'testuser',
-        'PASSWORD': 'pass',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
-
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-
-
-DATABASES = {'default': dj_database_url.config()}
+DATABASES = {}
 
 
 
@@ -101,7 +82,7 @@ DATABASES = {'default': dj_database_url.config()}
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -119,3 +100,22 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'foodtrucks/static'),
 )
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10
+}
+
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = ['*']
+
+DEBUG = False
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

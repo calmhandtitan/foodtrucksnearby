@@ -16,6 +16,9 @@ class QueryForm(forms.Form):
 	limit = forms.IntegerField(min_value=0, initial=10, \
 								widget = forms.NumberInput(attrs={'class':'form-control',\
 	                                'placeholder':'10', 'autofocus':'on'}))
+<<<<<<< HEAD
+>>>>>>> parent of b0ac281... addded pep8 code styling using autopep8
+=======
 >>>>>>> parent of b0ac281... addded pep8 code styling using autopep8
 
     radius = forms.DecimalField(max_digits=6, decimal_places=3, min_value=decimal.Decimal(0), initial=1.0,

@@ -1,28 +1,28 @@
 # API documentation
-All data is pulled from the[`Mobile Food Facility Permit dataset on DataSF`](https: // data.sfgov.org / Permitting / Mobile - Food - Facility - Permit / rqzj - sfat)
+All data is pulled from the[`Mobile Food Facility Permit dataset on DataSF`](https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat)
 
 
-**API Root: ** ` / api / `
+**API Root: ** `/api/`
 
 # Foodtrucks
 
 Basic API to retrieve foodtruck data.
 
-**URL: ** `foodtrucks / `
+**URL: ** `foodtrucks/`
 **Allow: ** `GET`, `POST`
-**Content - Type: ** `application / json`
+**Content-Type: ** `application/json`
 **Fields: **
 - `objectid` (integer): primary key of foodtruck
-- `applicant` (string): name of foodtruck and / or foodtruck owner
+- `applicant` (string): name of foodtruck and/or foodtruck owner
 - `facilitytype` (string): either "Truck", "Cart", or blank
-- `address` (string): human - readable address of cart
+- `address` (string): human-readable address of cart
 - `fooditems` (string): menu items supplied by cart owner
 - `latitude` (float): cart location latitude, in degrees
 - `longitude` (float): cart location longitude, in degrees
 
 # Examples:
 
-**`GET / api / foodtrucks / `**
+**`GET/api/foodtrucks/`**
 
 **Response: **
 ```
@@ -32,7 +32,7 @@ Basic API to retrieve foodtruck data.
         "applicant": "Bombay Blvd.",
         "facilitytype": "Truck",
         "address": "561 MISSION ST",
-        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads & Appetizer Varieties.",
+        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads&Appetizer Varieties.",
         "latitude": "0.000000000000",
         "longitude": "0.000000000000"
     },
@@ -41,7 +41,7 @@ Basic API to retrieve foodtruck data.
         "applicant": "Bombay Blvd.",
         "facilitytype": "Truck",
         "address": "86 03RD ST",
-        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads & Appetizer Varieties.",
+        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads&Appetizer Varieties.",
         "latitude": "37.786206082104",
         "longitude": "-122.402532491346"
     },
@@ -65,7 +65,7 @@ Basic API to retrieve foodtruck data.
     },
   ... (truncated)
 ```
-**`GET / api / foodtrucks / 334914 / `**
+**`GET/api/foodtrucks/334914/`**
 
 **Response: **
 ```
@@ -84,25 +84,25 @@ Basic API to retrieve foodtruck data.
 
 Retrieve list of foodtrucks within a given `radius` of center(`lat` and `lon`).
 
-**URL: ** `nearby / `
+**URL: ** `nearby/`
 **Allow: ** `GET`, `POST`
-**Content - Type: ** `application / json`
+**Content-Type: ** `application/json`
 
 **Query Arguments**: `latitude` (float), `longitude` (float), `radius` (float)[optional], `limit` (integer)[optional]
 
 ** Fields:**
 - `objectid` (integer): primary key of foodtruck
 - `distance` (float): distance from `lat`, `lon`
-- `applicant` (string): name of foodtruck and / or foodtruck owner
+- `applicant` (string): name of foodtruck and/or foodtruck owner
 - `facilitytype` (string): either "Truck", "Cart", or blank
-- `address` (string): human - readable address of cart
+- `address` (string): human-readable address of cart
 - `fooditems` (string): menu items supplied by cart owner
 - `latitude` (float): cart location latitude, in degrees
 - `longitude` (float): cart location longitude, in degrees
 
 # Examples:
 
-** `GET / api / nearby?latitude = 37.7919 & longitude = -122.4038`**
+** `GET/api/nearby?latitude=37.7919&longitude=-122.4038`**
 
 **Response:**
 ```
@@ -113,7 +113,7 @@ Retrieve list of foodtrucks within a given `radius` of center(`lat` and `lon`).
         "applicant": "Bombay Blvd.",
         "facilitytype": "Truck",
         "address": "86 03RD ST",
-        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads & Appetizer Varieties.",
+        "fooditems": "Indian Style: BBQ: Variety of Curries: Rice: Wraps: Breads (Naan: Rotis: Parathas): Desserts: Pizza.  Beverages: Condiments: Indian Soups: Salads&Appetizer Varieties.",
         "latitude": "37.786206082104",
         "longitude": "-122.402532491346"
     },

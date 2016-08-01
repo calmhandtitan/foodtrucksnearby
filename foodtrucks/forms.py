@@ -17,6 +17,9 @@ class QueryForm(forms.Form):
 								widget = forms.NumberInput(attrs={'class':'form-control',\
 	                                'placeholder':'10', 'autofocus':'on'}))
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b0ac281... addded pep8 code styling using autopep8
+=======
 >>>>>>> parent of b0ac281... addded pep8 code styling using autopep8
 =======
 >>>>>>> parent of b0ac281... addded pep8 code styling using autopep8

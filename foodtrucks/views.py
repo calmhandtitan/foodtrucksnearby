@@ -1,8 +1,7 @@
 import geopy
 import math
-from decimal import *
+from decimal import Decimal
 from geopy.distance import distance
-from geopy.geocoders import GoogleV3
 from django.shortcuts import render
 from rest_framework import status, viewsets
 from rest_framework.decorators import api_view

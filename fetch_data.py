@@ -1,16 +1,22 @@
-import os, django; 
+import os
+import django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "foodtrucknearby.settings")
 django.setup()
 
-import requests, json, datetime, logging, geopy
+import requests
+import json
+import datetime
+import logging
+import geopy
 from geopy.geocoders import GoogleV3
 from foodtrucks.models import Foodtruck
 
+
 def getValue(m, key):
-	if key in m:
-		return m[key]
-	else:
-		return None
+    if key in m:
+        return m[key]
+    else:
+        return None
 
 api_url = 'https://data.sfgov.org/resource/6a9r-agq8.json'
 geolocator = GoogleV3(api_key="AIzaSyCfBWyrDeF8AUgpS1yqo_HzkTw4UD2_34E")
@@ -32,7 +38,7 @@ else:
             truck.latitude = getValue(item, 'latitude')
             truck.longitude = getValue(item, 'longitude')
         except KeyError:
-            location = geolocator.geocode(truck.address+ " San Francisco, CA")
+            location = geolocator.geocode(truck.address + " San Francisco, CA")
             truck.latitude, truck.longitude = location.latitude, location.longitude
         ftrucks.append(truck)
 

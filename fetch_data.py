@@ -4,10 +4,8 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "foodtrucknearby.settings")
 django.setup()
 
 import requests
-import json
 import datetime
 import logging
-import geopy
 from geopy.geocoders import GoogleV3
 from foodtrucks.models import Foodtruck
 
